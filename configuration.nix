@@ -56,6 +56,10 @@
     brightnessctl
   ];
 
+  # Enable power management features
+  powerManagement.enable = true;
+  services.thermald.enable = true;
+
   # Enable Wayland and Sway
   programs.sway = {
     enable = true;
