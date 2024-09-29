@@ -27,8 +27,10 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+    firefox
     neofetch
     neovim
+    alacritty
 
     # archives
     zip
@@ -43,6 +45,9 @@
     fzf
     bat
     fd
+    stow
+    starship
+    delta
 
     # networking tools
     dnsutils  # `dig` + `nslookup`
@@ -66,7 +71,11 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
+
+  fonts.fontconfig.enable = true;
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage

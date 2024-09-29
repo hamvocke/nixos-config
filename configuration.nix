@@ -48,6 +48,12 @@
     slurp 		# also screenshots
     wl-clipboard	# wl-copy and wl-paste
     mako		# notifications
+
+    nodejs
+    gcc
+    gnumake
+
+    brightnessctl
   ];
 
   # Enable Wayland and Sway
@@ -57,7 +63,8 @@
   };
 
   xdg.portal.wlr.enable = true;
-  
+ 
+  programs.zsh.enable = true;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -89,11 +96,7 @@
   users.users.ham = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      firefox
-      tree
-      neovim
-    ];
+    shell = pkgs.zsh;
   };
 
   # List packages installed in system profile. To search, run:
