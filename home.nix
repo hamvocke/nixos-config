@@ -28,8 +28,6 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     firefox
-    neofetch
-    neovim
     alacritty
 
     # archives
@@ -38,21 +36,19 @@
     unzip
     p7zip
 
-    # utils
+    # command line goodness
+    neovim
+    tmux
     ripgrep
     jq
-    eza
     fzf
     bat
     fd
     stow
     starship
     delta
+    neofetch
 
-    # networking tools
-    dnsutils  # `dig` + `nslookup`
-
-    # misc
     file
     which
     tree
@@ -62,8 +58,10 @@
     zstd
     gnupg
     htop
+    lsof
 
-    lsof # list open files
+    # networking tools
+    dnsutils  # `dig` + `nslookup`
 
     # system tools
     sysstat
