@@ -29,6 +29,7 @@
   home.packages = with pkgs; [
     firefox
     alacritty
+    spotify
 
     # archives
     zip
