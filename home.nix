@@ -46,7 +46,6 @@
     bat
     fd
     stow
-    starship
     delta
     neofetch
     helix
@@ -74,6 +73,18 @@
 
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
+
+  programs = {
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
+      nix-direnv.enable = true;
+    };
+
+    starship = {
+      enable = true;
+    };
+  };
 
   fonts.fontconfig.enable = true;
 
