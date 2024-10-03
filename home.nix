@@ -48,6 +48,7 @@
     starship
     delta
     neofetch
+    helix
 
     file
     which
