@@ -100,6 +100,14 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
+
+  services.syncthing = {
+    enable = true;
+    user = "ham";
+    dataDir = "/home/ham/";
+    configDir = "/home/ham/.config/syncthing";
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ham = {
     isNormalUser = true;
