@@ -48,30 +48,25 @@
     git
     wget
     curl
-    grim 		# screenshots
-    slurp 		# also screenshots
     wl-clipboard	# wl-copy and wl-paste
-    mako		# notifications
 
     nodejs
     gcc
     gnumake
 
-    brightnessctl
   ];
+
+  # Set up Gnome as our desktop environmen
+  services.xserver.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
 
   # Enable power management features
   powerManagement.enable = true;
   services.thermald.enable = true;
 
-  # Enable Wayland and Sway
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-  };
-
-  xdg.portal.wlr.enable = true;
  
+  # Enable ZSH
   programs.zsh.enable = true;
 
   # Configure keymap in X11
