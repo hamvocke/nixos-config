@@ -56,6 +56,7 @@
     gcc
     gnumake
 
+    gnome-tweaks
   ];
 
   # Set up Gnome as our desktop environmen
