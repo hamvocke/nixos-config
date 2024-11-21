@@ -19,7 +19,7 @@
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-  networking.networkmanager.wifi.powersave = false;
+  # networking.networkmanager.wifi.powersave = false;
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -36,12 +36,8 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
 
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
   # Enable flakes and the 'new' nix command-line tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
 
   # Allow installing packages with an 'unfree' (non-OSS) license
   nixpkgs.config.allowUnfree = true;
@@ -59,7 +55,7 @@
     gnome-tweaks
   ];
 
-  # Set up Gnome as our desktop environmen
+  # Set up Gnome as our desktop environment
   services.xserver.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.displayManager.gdm.enable = true;
@@ -70,7 +66,7 @@
 
   # Enable fwupd for firmware updates
   services.fwupd.enable = true;
- 
+
   # Enable ZSH
   programs.zsh.enable = true;
 
@@ -81,25 +77,22 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable sound.
-  # hardware.pulseaudio.enable = true;
-  # OR
+  # Sound
   services.pipewire = {
-     enable = true;
-     pulse.enable = true;
+    enable = true;
+    pulse.enable = true;
   };
 
   # Bluetooth
   hardware.bluetooth = {
-      enable = true;
-      powerOnBoot = true;
+    enable = true;
+    powerOnBoot = true;
   };
 
   services.blueman.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
-
 
   services.syncthing = {
     enable = true;
@@ -115,23 +108,6 @@
     shell = pkgs.zsh;
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  # environment.systemPackages = with pkgs; [
-  #   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #   wget
-  # ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
@@ -141,6 +117,7 @@
   # Or disable the firewall altogether.
   networking.firewall.enable = false;
 
+  # Docker
   virtualisation.docker.enable = true;
 
   # Copy the NixOS configuration file and link it from the resulting system
