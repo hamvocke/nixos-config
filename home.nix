@@ -30,6 +30,7 @@
     firefox
     alacritty
     spotify
+    gimp
 
     # archives
     zip
