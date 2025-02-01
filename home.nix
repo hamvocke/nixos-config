@@ -31,6 +31,7 @@
     alacritty
     spotify
     gimp
+    inkscape
 
     # archives
     zip
