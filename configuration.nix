@@ -14,6 +14,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Trying to fix a performance issue
+  boot.kernelParams = [ "intel_pstate=active" ];
+
   networking.hostName = "kronos"; # Define your hostname.
 
   # Pick only one of the below networking options.
@@ -90,6 +93,11 @@
   };
 
   services.blueman.enable = true;
+
+  # GPU
+  hardware.graphics = {
+    extraPackages = with pkgs; [ vaapiIntel intel-media-driver ];
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
