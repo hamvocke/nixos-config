@@ -72,8 +72,6 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
-
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 
   programs = {

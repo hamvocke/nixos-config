@@ -58,6 +58,15 @@
     gnome-tweaks
   ];
 
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-emoji
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
+    nerd-fonts.iosevka-term
+    
+  ];
+
   # Set up Gnome as our desktop environment
   services.xserver.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
