@@ -32,6 +32,7 @@
     spotify
     gimp
     inkscape
+    obsidian
 
     # archives
     zip
