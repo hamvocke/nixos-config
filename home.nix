@@ -33,6 +33,7 @@
     gimp
     inkscape
     obsidian
+    blender
 
     # archives
     zip
