@@ -121,7 +121,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ham = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "docker" ];
+    extraGroups = [ "wheel" "networkmanager" "podman" ];
     shell = pkgs.zsh;
   };
 
@@ -134,8 +134,15 @@
   # Or disable the firewall altogether.
   networking.firewall.enable = false;
 
-  # Docker
-  virtualisation.docker.enable = true;
+  # Set up Podman for container virtualisation
+  virtualisation.containers.enable = true;
+  virtualisation = {
+    podman = {
+      enable = true;
+      dockerCompat = true; # create 'docker' alias
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
