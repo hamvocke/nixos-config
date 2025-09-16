@@ -72,7 +72,7 @@
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.displayManager.gdm.enable = true;
 
-  # Enable power management features
+  # Power management features
   powerManagement.enable = true;
   services.thermald.enable = true;
 
@@ -87,7 +87,14 @@
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = [ 
+      pkgs.brlaser
+      pkgs.brgenml1lpr
+      pkgs.brgenml1cupswrapper
+    ];
+  };
 
   # Sound
   services.pipewire = {
