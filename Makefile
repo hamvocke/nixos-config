@@ -4,6 +4,5 @@ update:
 	nix flake update
 
 rebuild:
-	sudo nixos-rebuild switch --flake
-
+	sudo nixos-rebuild switch --flake .
 
