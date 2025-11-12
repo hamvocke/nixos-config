@@ -56,6 +56,8 @@
     gnumake
 
     gnome-tweaks
+
+    podman-compose
   ];
 
   fonts.packages = with pkgs; [
