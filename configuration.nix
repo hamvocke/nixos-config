@@ -62,7 +62,7 @@
 
   fonts.packages = with pkgs; [
     noto-fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     nerd-fonts.fira-code
     nerd-fonts.droid-sans-mono
     nerd-fonts.iosevka-term
@@ -114,7 +114,7 @@
 
   # GPU
   hardware.graphics = {
-    extraPackages = with pkgs; [ vaapiIntel intel-media-driver ];
+    extraPackages = with pkgs; [ intel-vaapi-driver intel-media-driver ];
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
