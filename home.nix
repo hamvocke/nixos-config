@@ -19,6 +19,7 @@
     inkscape
     obsidian
     blender
+    vscode
 
     # archives
     zip
