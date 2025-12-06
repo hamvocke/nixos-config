@@ -98,6 +98,14 @@
     ];
   };
 
+
+  # Find network printers (and probably other stuff too) via mDNS
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
   # Sound
   services.pipewire = {
     enable = true;
