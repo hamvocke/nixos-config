@@ -66,7 +66,7 @@
     nerd-fonts.fira-code
     nerd-fonts.droid-sans-mono
     nerd-fonts.iosevka-term
-    
+    lato
   ];
 
   # Set up Gnome as our desktop environment
