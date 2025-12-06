@@ -20,6 +20,10 @@
     obsidian
     blender
     vscode
+    mullvad-vpn
+    signal-desktop
+
+    naps2 # document scanning
 
     # archives
     zip
